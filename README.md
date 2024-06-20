@@ -48,8 +48,13 @@ pyinstaller --onefile operations.py
 ```bash
 uvicorn server:app --reload
 ```
+3. Run the sample unit tests:
 
-3. Access the API documentation at `http://127.0.0.1:8000/docs`.
+```bash
+pytest test_server.py
+```
+
+4. Access the API documentation at `http://127.0.0.1:8000/docs`.
 
 ## API Endpoints
 
@@ -66,7 +71,7 @@ uvicorn server:app --reload
   - `operation`: The performed operation (multiplication).
   - `result`: The result of the multiplication.
 - **Errors:**
-  - `400: Bad Request`, For too large nubmers bigger than 100000.
+  - `400: Bad Request`, For too large numbers bigger than 100000.
 
 ### Division
 
